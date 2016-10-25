@@ -6,4 +6,6 @@ Projeto exemplificando como consumir a biblioteca JTCGen.
 
 Explorando as classes do projeto, poderá encontrar exemplos de como utilizar as annotations da biblioteca.
 
-Dúvidas, acesse a documentação: http://rgoncalves94.github.io/jtcgen/
+Acesse a documentação: http://rgoncalves94.github.io/jtcgen/
+
+Repositório do projeto: https://github.com/rgoncalves94/jtcgen
