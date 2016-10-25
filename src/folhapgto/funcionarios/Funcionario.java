@@ -1,7 +1,5 @@
 package folhapgto.funcionarios;
 
-import static org.mockito.Mockito.when;
-
 import br.com.jtcgen.annotations.JTCGen;
 import br.com.jtcgen.annotations.Test;
 
@@ -22,7 +20,7 @@ public class Funcionario {
 	/**
 	 * Calcula descontos do vale transporte
 	 * */
-	@Test("setup(['Rafael', 5000.0, {c:'TipoContratacao@getSigla()@getNome()', v:['CLT', 'Contrato']}]).parameter().eq(250.0)")
+	@Test("setup(['User', 5000.0, {c:'TipoContratacao@getSigla()@getNome()', v:['CLT', 'Contrato']}]).parameter().eq(250.0)")
 	public double calculaDescontoVT() {
 		
 		double percentualDesconto = 0.0;
@@ -35,7 +33,7 @@ public class Funcionario {
 		return this.salarioBase * percentualDesconto;
 	}
 	
-	@Test("setup(['Rafa', 5000.0, {c:'TipoContratacao@getSigla()', v:'CLT'}])"
+	@Test("setup(['User', 5000.0, {c:'TipoContratacao@getSigla()', v:'CLT'}])"
 	+ ".parameter([{c:'Descontos@getValeTransporte()@getAssistMedica()@getAssistDental()@getAdiantamento()',"
 	+ "v:[100.0, 100.5, 100.0, 100.5]}]).eq(4599.0)")
 	public double calculaSalarioLiquido(Descontos desc) {
@@ -43,7 +41,7 @@ public class Funcionario {
 				- desc.getAssistDental() - desc.getAdiantamento();
 	}
 	
-	@Test("setup(['Rafa', 5000.0, {c:'TipoContratacao@getSigla()', v:'CLT'}])"
+	@Test("setup(['User', 5000.0, {c:'TipoContratacao@getSigla()', v:'CLT'}])"
 		+ ".parameter([{c:'Descontos@obtemDescontosSomados()',v:500.0}, 200.0]).eq(4700.0)")
 		public double calculaSalarioLiquidoComBonificacao(Descontos desc, double bonificacao) {
 			return this.salarioBase - desc.obtemDescontosSomados() + bonificacao;
