@@ -25,6 +25,20 @@ public class FuncionarioTest {
 	}
 
 	@Test
+	public void calculaSalarioLiquidoComBonificacao() {
+		TipoContratacao tipocontratacao = mock(TipoContratacao.class);
+		when(tipocontratacao.getSigla()).thenReturn("CLT");
+
+		Funcionario funcionario = new Funcionario("User", 5000.0, tipocontratacao);
+
+		Descontos descontos = mock(Descontos.class);
+		when(descontos.obtemDescontosSomados()).thenReturn(500.0);
+
+		double expected = funcionario.calculaSalarioLiquidoComBonificacao(descontos, 200);
+		assertEquals(4700.0, expected, 0.0001);
+	}
+	
+	@Test
 	public void calculaDescontoVT() {
 		TipoContratacao tipocontratacao = mock(TipoContratacao.class);
 		when(tipocontratacao.getSigla()).thenReturn("CLT");
@@ -55,20 +69,6 @@ public class FuncionarioTest {
 
 		double expected = funcionario.calculaSalarioLiquido(descontos);
 		assertEquals(4599.0, expected, 0.0001);
-	}
-	
-	@Test
-	public void calculaSalarioLiquidoComBonificacao() {
-		TipoContratacao tipocontratacao = mock(TipoContratacao.class);
-		when(tipocontratacao.getSigla()).thenReturn("CLT");
-
-		Funcionario funcionario = new Funcionario("User", 5000.0, tipocontratacao);
-
-		Descontos descontos = mock(Descontos.class);
-		when(descontos.obtemDescontosSomados()).thenReturn(500.0);
-
-		double expected = funcionario.calculaSalarioLiquidoComBonificacao(descontos, 200);
-		assertEquals(4700.0, expected, 0.0001);
 	}
 	
 }
