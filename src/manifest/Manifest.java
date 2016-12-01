@@ -1,11 +1,14 @@
 package manifest;
 
 import br.com.jtcgen.JTCGenenerator;
+import br.com.jtcgen.TestCaseGenerable;
 
 public class Manifest {
+	
 	public static void main(String[] args) {
-		JTCGenenerator jtcGenenerator = new JTCGenenerator();
+		 TestCaseGenerable jtcGenenerator = new JTCGenenerator();
 
-		jtcGenenerator.generateTests();
+		jtcGenenerator.generateTests(JTCGenenerator.DISABLE_BACKUP);
 	}
+	
 }

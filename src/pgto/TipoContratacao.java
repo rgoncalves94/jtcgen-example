@@ -1,4 +1,4 @@
-package folhapgto.funcionarios;
+package pgto;
 
 public class TipoContratacao {
 	

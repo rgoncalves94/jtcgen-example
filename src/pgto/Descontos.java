@@ -1,4 +1,4 @@
-package folhapgto.funcionarios;
+package pgto;
 
 import br.com.jtcgen.annotations.JTCGen;
 import br.com.jtcgen.annotations.SetUp;
@@ -25,6 +25,13 @@ public class Descontos {
 		this.assistMedica = am;
 		this.assistDental = ad;
 		this.adiantamento = adiant;
+	}
+	
+	public Descontos(double vt, double am, double ad) {
+		this.valeTransporte = vt;
+		this.assistMedica = am;
+		this.assistDental = ad;
+		this.adiantamento = 0;
 	}
 	
 	public double getValeTransporte() {

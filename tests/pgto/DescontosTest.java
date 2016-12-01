@@ -1,4 +1,4 @@
-package folhapgto.funcionarios;
+package pgto;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import folhapgto.funcionarios.Descontos;
+import pgto.Descontos;
 
 
 public class DescontosTest {
