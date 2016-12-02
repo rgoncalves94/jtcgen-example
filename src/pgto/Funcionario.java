@@ -9,12 +9,11 @@ import br.com.jtcgen.annotations.TestNotNull;
 import br.com.jtcgen.annotations.TestTrue;
 import br.com.jtcgen.annotations.TestVoidEquals;
 
-@JTCGen
 public class Funcionario {
 	
 	protected String nome;
 	protected double salarioBase;
-	protected TipoContratacao tipoContrato;
+	protected Contrato tipoContrato;
 	
 	public Funcionario(){
 		super();
@@ -23,7 +22,7 @@ public class Funcionario {
 		this.tipoContrato = null;
 	}
 	
-	public Funcionario(String nome, double salarioBase, TipoContratacao tipoContrato) {
+	public Funcionario(String nome, double salarioBase, Contrato tipoContrato) {
 		super();
 		this.nome = nome;
 		this.salarioBase = salarioBase;
@@ -34,7 +33,7 @@ public class Funcionario {
 		super();
 		this.nome = nome;
 		this.salarioBase = salarioBase;
-		this.tipoContrato = new TipoContratacao("CPS", "Prestador de Servico");
+		this.tipoContrato = new Contrato("CPS", "Prestador de Servico");
 	}
 	
 	@Test("setup(['Jose', 3000.0]).parameter([140.0]).isTrue()")
@@ -68,11 +67,11 @@ public class Funcionario {
 		this.salarioBase = salarioBase;
 	}
 
-	public TipoContratacao getTipoContrato() {
+	public Contrato getTipoContrato() {
 		return tipoContrato;
 	}
 
-	public void setTipoContrato(TipoContratacao tipoContrato) {
+	public void setTipoContrato(Contrato tipoContrato) {
 		this.tipoContrato = tipoContrato;
 	}	
 	

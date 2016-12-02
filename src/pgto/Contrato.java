@@ -1,11 +1,11 @@
 package pgto;
 
-public class TipoContratacao {
+public class Contrato {
 	
 	private String sigla;
 	private String nome;
 	
-	public TipoContratacao(String sigla, String nome) {
+	public Contrato(String sigla, String nome) {
 		super();
 		this.sigla = sigla;
 		this.nome = nome;
