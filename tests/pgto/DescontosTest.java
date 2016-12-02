@@ -27,8 +27,8 @@ public class DescontosTest {
 	public void obtemDescontosSomados() {
 		
 		
-		double resultado = this.instance.obtemDescontosSomados();
-		assertEquals(400.0, resultado, 0.00001);
+		double resultado1 = this.instance.obtemDescontosSomados();
+		assertEquals(400.0, resultado1 , 0.00001);
 	}
 	
 }

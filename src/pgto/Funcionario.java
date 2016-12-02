@@ -42,8 +42,8 @@ public class Funcionario {
 		return valeTransporte < (salarioBase * 0.06);		
 	}
 	
-	@Test({"setup(['Jose', 3000.0, {c:'TipoContratacao@getSigla()', v:['CLT']}]).parameter([140.0]).eq(180.0)",
-	"setup(['Jose', 1500.0, {c:'TipoContratacao@getSigla()', v:['CLT']}]).parameter([140.0]).eq(0)"})
+	@Test("setup(['Jose', 3000.0, {c:'TipoContratacao@getSigla()', v:['CLT']}]).parameter([140.0]).eq(180.0)")
+	@Test("setup(['Jose', 1500.0, {c:'TipoContratacao@getSigla()', v:['CLT']}]).parameter([140.0]).eq(0)")
 	public double calculaDescontoVT(double valeTransporte) {
 		double percentualDesconto = 0.0;
 		if(salarioExcedenteVT(valeTransporte) && this.tipoContrato.getSigla().equals("CLT"))

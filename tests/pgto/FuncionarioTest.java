@@ -23,14 +23,6 @@ public class FuncionarioTest {
 	public void tearDown() throws Exception {
 		this.instance = null;
 	}
-
-	@Test
-	public void salarioExcedenteVT() {
-		Funcionario funcionario = new Funcionario("Jose", 3000.0);
-
-		boolean expected = funcionario.salarioExcedenteVT(140.0);
-		assertTrue(expected);
-	}
 	
 	@Test
 	public void calculaDescontoVT() {
